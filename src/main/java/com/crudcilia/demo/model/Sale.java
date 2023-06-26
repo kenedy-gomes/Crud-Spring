@@ -17,16 +17,16 @@ public class Sale implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String client;
-	private String products;
+	private Client client;
+	private Product product;
 	
 	public Sale() {}
 
-	public Sale(Long id, String client, String products) {
+	public Sale(Long id, Client client, Product product) {
 		super();
 		this.id = id;
 		this.client = client;
-		this.products = products;
+		this.product = product;
 	}
 
 	public Long getId() {
@@ -37,25 +37,21 @@ public class Sale implements Serializable {
 		this.id = id;
 	}
 
-	public String getClient() {
+	public Client getClient() {
 		return client;
 	}
 
-	public void setClient(String client) {
+	public void setClient(Client client) {
 		this.client = client;
 	}
 
-	public String getProducts() {
-		return products;
+	public Product getProduct() {
+		return product;
 	}
 
-	public void setProducts(String products) {
-		this.products = products;
+	public void setProduct(Product product) {
+		this.product = product;
 	}
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(client, id, products);
-	}
-
+	 
 }

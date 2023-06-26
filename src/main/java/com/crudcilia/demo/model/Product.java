@@ -1,8 +1,6 @@
 package com.crudcilia.demo.model;
 
 import java.io.Serializable;
-import java.util.Objects;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,18 +17,19 @@ public class Product implements Serializable {
 	private Long id;
 	private String name;
 	private String description;
-	private Double preco;
+	private Double price;
+
 	
 	
 	public Product() {}
 
 
-	public Product(Long id, String name, String description, Double preco) {
-		super();
+	public Product(Long id, String name, String description, Double price, String image) {
 		this.id = id;
 		this.name = name;
 		this.description = description;
-		this.preco = preco;
+		this.price = price;
+	
 	}
 
 
@@ -64,18 +63,13 @@ public class Product implements Serializable {
 	}
 
 
-	public Double getPreco() {
-		return preco;
+	public Double getPrice() {
+		return price;
 	}
 
 
-	public void setPreco(Double preco) {
-		this.preco = preco;
+	public void setPrice(Double price) {
+		this.price = price;
 	}
-
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(description, id, name, preco);
-	}
+	
 }
