@@ -36,11 +36,7 @@ public class ClientService {
         return clientRepository.save(client);
     }
 	
-	@CrossOrigin(origins = "http://localhost:4200")
-	public Client fromDTO(ClientDTO objDTO) {
-		return new Client(objDTO.getId(), objDTO.getName(), objDTO.getEmail(), objDTO.getPassword(), objDTO.getDate());
-		
-	}
+	 
 	@CrossOrigin(origins = "http://localhost:4200")
 	  public void deleteById(Long id) {
 	        clientRepository.deleteById(id);

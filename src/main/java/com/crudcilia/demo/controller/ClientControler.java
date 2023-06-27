@@ -75,8 +75,7 @@ public class ClientControler {
 	        }
 	    }
      
-     @SuppressWarnings("unused")
-	private String generateToken(String email) {
+     private String generateToken(String email) {
 
          String secretKey = "seuSegredo";
          long expirationTime = 86400000; 

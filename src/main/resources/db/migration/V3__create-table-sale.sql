@@ -1,3 +1,3 @@
-CREATE TABLE sale(
+CREATE TABLE  sale (
   id SERIAL PRIMARY KEY
-)
+);
