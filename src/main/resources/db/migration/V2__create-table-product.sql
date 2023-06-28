@@ -4,3 +4,6 @@ CREATE TABLE product(
   description VARCHAR(100),
   price FLOAT NOT NULL
 )
+
+
+

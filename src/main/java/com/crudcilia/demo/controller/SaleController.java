@@ -34,10 +34,10 @@ public class SaleController {
 		return ResponseEntity.ok().body(obj);
 	}
 	
-	 @PostMapping
-	    public ResponseEntity<Sale> createSale(@RequestBody Sale sale) {
-		 Sale createdClient = saleService.insert(sale);
-	        return ResponseEntity.status(HttpStatus.CREATED).body(createdClient);
+	@PostMapping
+	public ResponseEntity<Sale> createSale(@RequestBody Sale sale) {
+    Sale createdClient = saleService.insert(sale);
+	return ResponseEntity.status(HttpStatus.CREATED).body(createdClient);
 	    }
 	 
 	 @DeleteMapping("/{id}")
@@ -45,4 +45,8 @@ public class SaleController {
 		 saleService.deleteById(id);
 	     return ResponseEntity.noContent().build();
 	 }
+	 
+	 
+	 
+	 
 }

@@ -5,3 +5,6 @@ CREATE TABLE client (
   password VARCHAR(255) NOT NULL,
   date DATE
 );
+
+ 
+

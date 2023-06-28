@@ -52,18 +52,16 @@ public class ClientService {
         return false;
     }
 
-	public boolean isEmailAlreadyRegistered(String email) {
-		List<Client> clients = clientRepository.findAll();
-
+    public boolean isEmailAlreadyRegistered(String email) {
+        List<Client> clients = clientRepository.findAll();
         for (Client client : clients) {
             if (client.getEmail().equals(email)) {
-                return false; 
+                return true;  
             }
         }
 
         return false;  
-	}
-
+    }
  
 	
 }

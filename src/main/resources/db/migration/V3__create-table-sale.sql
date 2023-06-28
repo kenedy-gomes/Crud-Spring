@@ -1,3 +1,4 @@
 CREATE TABLE  sale (
   id SERIAL PRIMARY KEY
 );
+

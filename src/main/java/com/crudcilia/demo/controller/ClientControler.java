@@ -75,8 +75,9 @@ public class ClientControler {
 	        }
 	    }
      
+     
+     
      private String generateToken(String email) {
-
          String secretKey = "seuSegredo";
          long expirationTime = 86400000; 
          
